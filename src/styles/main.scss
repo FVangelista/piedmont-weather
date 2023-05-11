@@ -1,0 +1,301 @@
+// Variables
+
+$clr-light-bg: #fccb4625;
+$clr-green: #619b8a;
+$clr-orange: #fe7f2d;
+
+$clr-dark-bg: #252525;
+$clr-dark-blue: #144552;
+$clr-blue: #006466;
+
+// Resets
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.body {
+  background-color: $clr-light-bg;
+}
+
+//  App
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: $clr-green;
+
+  .header_logo {
+    width: 40px;
+  }
+
+  .text {
+    text-transform: capitalize;
+    letter-spacing: 0.075em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .btn {
+    position: absolute;
+    right: 1em;
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.075em;
+    color: $clr-dark-bg;
+    box-shadow: 0px 0px 8px rgba(125, 125, 125, 0.5);
+    cursor: pointer;
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    position: relative;
+    margin: 0 auto;
+    padding: 5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    letter-spacing: 0.075em;
+    user-select: none;
+
+    .logo-img {
+      position: absolute;
+      top: 10%;
+      left: -65%;
+      width: 200px;
+    }
+
+    .logo_text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo_text_inner {
+      position: absolute;
+      left: 30px;
+      bottom: -10px;
+      width: 150px;
+      font-size: 0.75rem;
+      font-weight: bolder;
+      color: #fe7f2d;
+    }
+  }
+
+  .text_wrapper {
+    max-width: 720px;
+    .text_info {
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+.main_content {
+  width: 100%;
+  margin: 40px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  .selection {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #006466;
+    border-radius: 8px;
+    background: none;
+    color: #006466;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .cards_wrapper {
+    max-width: 1250px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 320px) {
+      .cards_wrapper {
+        padding: 25px 0px;
+      }
+    }
+
+    .card {
+      position: relative;
+      height: 450px;
+      width: 275px;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 8px rgba(125, 125, 125, 0.5);
+
+      .bgImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        z-index: -1;
+      }
+
+      .now {
+        margin: 0 auto;
+        font-size: 3.5rem;
+        color: #ffffff;
+      }
+
+      .maxMin {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+      }
+
+      .text {
+        margin: 0 auto;
+        padding: 10px 0px;
+        color: #fff;
+        letter-spacing: 1.25px;
+        font-weight: bolder;
+      }
+
+      .addInfo {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
+      }
+
+      .icon {
+        margin: 0 auto;
+      }
+
+      .province {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        margin: 0 auto;
+        padding: 10px 0px;
+        font-size: 2rem;
+        letter-spacing: 1.25px;
+        line-height: 25px;
+        color: #fff;
+      }
+
+      @media (max-width: 320px) {
+        .card {
+          height: 400px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $clr-green;
+
+  .header_logo {
+    width: 40px;
+  }
+
+  .text {
+    text-transform: capitalize;
+    letter-spacing: 0.075em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .btn_footer {
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    cursor: pointer;
+  }
+}
+
+// Dark theme
+
+.bg_dark_blue {
+  background-color: $clr-dark-blue;
+}
+
+.bg_dark {
+  background-color: $clr-dark-bg;
+  color: #ffffff;
+}
+
+.text_dark {
+  color: $clr-dark-blue !important;
+}
+
+/* Map */
+
+#map {
+  height: 450px;
+  width: 100%;
+
+  a[href^="http://maps.google.com/maps"]
+  {
+    display: none !important;
+  }
+  a[href^="https://maps.google.com/maps"]
+  {
+    display: none !important;
+  }
+
+  .gmnoprint a,
+  .gmnoprint span,
+  .gm-style-cc {
+    display: none;
+  }
+}
