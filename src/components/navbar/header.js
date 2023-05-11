@@ -12,10 +12,6 @@ export default function header() {
   weatherIcon.classList.add("header_logo");
   const text = cEl("p");
   text.classList.add("text");
-  const btn = cEl("button");
-  btn.classList.add("btn");
-  btn.id = "btn";
-  btn.textContent = "Dark / Light";
 
   GET("piedmont").then((data) => {
     weatherIcon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
@@ -32,5 +28,4 @@ export default function header() {
   header.appendChild(logoHeader);
   header.appendChild(text);
   header.appendChild(weatherIcon);
-  header.appendChild(btn);
 }

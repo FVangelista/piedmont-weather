@@ -15,6 +15,10 @@ export default function about() {
   logoTextInner.classList.add("logo_text_inner");
   const logoImg = cEl("img");
   logoImg.classList.add("logo-img");
+  const btn = cEl("button");
+  btn.classList.add("btn");
+  btn.id = "btn";
+  btn.textContent = "Dark / Light";
 
   logoImg.src = logoDay;
 
@@ -33,6 +37,7 @@ export default function about() {
   logo.appendChild(logoImg);
   logo.appendChild(logoText);
   logoText.appendChild(logoTextInner);
+  about.appendChild(btn);
   about.appendChild(textWrapper);
   textWrapper.appendChild(textInfo);
 }
