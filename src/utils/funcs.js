@@ -43,7 +43,7 @@ const dataFilter = (select, display, data, wrapper, control) => {
 // Map - api init
 function initMap() {
   let map = new google.maps.Map(document.getElementById("map"), {
-    mapId: process.env.MAP_ID,
+    mapId: "a25ede39525eec8e",
     center: { lat: 45, lng: 7 },
     zoom: 7,
     maxZoom: 7,
