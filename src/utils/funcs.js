@@ -53,7 +53,7 @@ function initMap() {
 
   let myMapType = new google.maps.ImageMapType({
     getTileUrl: function (coord, zoom) {
-      return `https://tile.openweathermap.org/map/precipitation/${zoom}/${coord.x}/${coord.y}.png?appid=${process.env.API_SECRETE}`;
+      return `https://tile.openweathermap.org/map/precipitation/${zoom}/${coord.x}/${coord.y}.png?appid=dbff8968ab8e7b929f0ef9580ed94916`;
     },
     tileSize: new google.maps.Size(256, 256),
     name: "mymaptype",
